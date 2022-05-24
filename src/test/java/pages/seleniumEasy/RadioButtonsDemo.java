@@ -20,4 +20,20 @@ public class RadioButtonsDemo {
     public static String readMessage() {
         return Common.getElementText(Locators.SeleniumEasy.RadioButtonsDemo.fieldCheckedValue);
     }
+
+    public static void clickRadioButtonBySex(String sex) {
+        Common.clickElement(Locators.SeleniumEasy.RadioButtonsDemo.inputBySex(sex));
+    }
+
+    public static void clickRadioButtonByAgeGroup(String ageGroup) {
+        Common.clickElement(Locators.SeleniumEasy.RadioButtonsDemo.inputByAgeGroup(ageGroup));
+    }
+
+    public static void clickGetValues() {
+        Common.clickElement(Locators.SeleniumEasy.RadioButtonsDemo.buttonGetValues);
+    }
+
+    public static String readMessageSexAgeGroup() {
+        return Common.getElementText(Locators.SeleniumEasy.RadioButtonsDemo.fieldSexAndAgeGroup);
+    }
 }
