@@ -1,10 +1,14 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.Driver;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -61,5 +65,31 @@ public class Common {
 
         // Gražinam sarašą
         return statusList;
+    }
+
+    public static void acceptAlert() {
+        Driver.getDriver().switchTo().alert().accept();
+    }
+
+    public static void waitForElementToBeVisible(By locator) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    public static boolean isAlertPresent() {
+        try {
+            Driver.getDriver().switchTo().alert();
+            return true;
+        } catch (NoAlertPresentException ex) {
+            return false;
+        }
+    }
+
+    public static void dismissAlert() {
+        Driver.getDriver().switchTo().alert().dismiss();
+    }
+
+    public static void sendKeysToAlert(String keys) {
+        Driver.getDriver().switchTo().alert().sendKeys(keys);
     }
 }

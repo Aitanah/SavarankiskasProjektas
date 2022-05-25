@@ -47,5 +47,13 @@ public class Locators {
             public static By buttonGetValues = By.xpath("(//*[@type='button'])[3]");
             public static By fieldSexAndAgeGroup = By.xpath("//*[@class='groupradiobutton']");
         }
+
+        public static class JavascriptAlerts{
+            public static By buttonForAlertBox = By.xpath("//*[@class='btn btn-default']");
+            public static By buttonForConfirmBox = By.xpath("//*[@class='btn btn-default btn-lg' and text()='Click me!']");
+            public static By buttonForPromptBox = By.xpath("//*[@class='btn btn-default btn-lg' and text()='Click for Prompt Box']");
+            public static By fieldConfirmBoxMessage = By.xpath("//*[@id='confirm-demo']");
+            public static By fieldPromptBoxMessage = By.xpath("//*[@id='prompt-demo']");
+        }
     }
 }
