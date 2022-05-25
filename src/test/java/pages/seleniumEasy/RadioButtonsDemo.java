@@ -20,7 +20,7 @@ public class RadioButtonsDemo {
     public static String readMessage() {
         return Common.getElementText(Locators.SeleniumEasy.RadioButtonsDemo.fieldCheckedValue);
     }
-
+//  Group Radio Buttons Demo
     public static void clickRadioButtonBySex(String sex) {
         Common.clickElement(Locators.SeleniumEasy.RadioButtonsDemo.inputBySex(sex));
     }

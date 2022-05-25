@@ -1,8 +1,6 @@
 package utilities;
 
 import org.testng.annotations.DataProvider;
-import tests.BaseTest;
-import tests.seleniumEasy.RadioButtonsDemo;
 
 public class DataProviders  {
 
