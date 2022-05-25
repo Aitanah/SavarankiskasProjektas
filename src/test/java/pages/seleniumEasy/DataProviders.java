@@ -1,4 +1,4 @@
-package utilities;
+package pages.seleniumEasy;
 
 import org.testng.annotations.DataProvider;
 

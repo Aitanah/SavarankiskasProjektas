@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import tests.BaseTest;
-import utilities.DataProviders;
+import pages.seleniumEasy.DataProviders;
 
 public class RadioButtonsDemo extends BaseTest {
 
